@@ -63,14 +63,15 @@ Este módulo centraliza la lógica de las operaciones contables, asegurando que 
 
 ## Diagrama de flujo de datos entre módulos
 
-	flowchart TD
-	  A[Usuario] -->|Interacción| B(MainProgram)
-	  B -->|Solicita operación| C(Operations)
-	  C -->|Consulta/Actualiza saldo| D(DataProgram)
-	  D -->|Devuelve saldo actualizado| C
-	  C -->|Muestra resultado| B
-	  B -->|Muestra menú| A
-
+```mermaid
+flowchart TD
+  A[Usuario] -->|Interacción| B(MainProgram)
+  B -->|Solicita operación| C(Operations)
+  C -->|Consulta/Actualiza saldo| D(DataProgram)
+  D -->|Devuelve saldo actualizado| C
+  C -->|Muestra resultado| B
+  B -->|Muestra menú| A
+```
 **Descripción:**
 
 - El usuario interactúa con el menú principal (`MainProgram`).
